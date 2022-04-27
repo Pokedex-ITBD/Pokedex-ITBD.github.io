@@ -3,6 +3,6 @@
     -moz-transform: scale(2.2);
 }
 
-.divProfile {
+.divProfile, .grid-item, .introduction, .homeNavigations {
     width: 90%;
 }

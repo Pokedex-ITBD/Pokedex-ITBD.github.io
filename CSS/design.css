@@ -149,7 +149,7 @@ input:focus {
 
     }
 
-    .divProfile, .divDesc {
+    .divProfile, .divDesc, .homeNavigations, .introduction {
         width: 80%;
     }
 }
@@ -160,6 +160,37 @@ input:focus {
 
 }
 
+.introduction {
+    color: #F0F0F0; 
+    width: 40%; 
+    margin-top: 10%; 
+    margin-left: 5%;
+}
+
+
+/*NAVIGATIONS*/
+
+
+.navigationLinks {
+    color: #F00000;
+    text-align: right;
+    text-decoration: none;
+    font-size: 3vh;
+
+    margin-bottom: 1vh;
+    padding: 2vh;
+    border: 2vh;
+
+    display: block;
+    position: relative;
+
+    border-radius: 10px;
+}
+
+.navigationLinks:hover {
+    color: #F0F0F0;
+    background-color: #F00000;
+}
 
 
 

@@ -4,3 +4,9 @@
 
     transition: .5s ease;
 }
+
+.homeNavigations {
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+}
