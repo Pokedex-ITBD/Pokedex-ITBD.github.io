@@ -1,0 +1,8 @@
+.divListItem, .divInput {
+    zoom: 2.2;
+    -moz-transform: scale(2.2);
+}
+
+.divProfile {
+    width: 90%;
+}

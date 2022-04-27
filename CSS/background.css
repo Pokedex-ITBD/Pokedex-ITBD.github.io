@@ -1,0 +1,15 @@
+body {
+    background-image: url("../Images/pokedexHomeBG.svg");
+    background-size: 103%;
+    background-repeat: no-repeat;
+    background-position: 0% 6%;
+}
+
+@media screen and (orientation:portrait) {
+    
+body {
+    background: url("../Images/pokedexHomeBGMobile.svg") no-repeat center center fixed;
+    background-size: 110%;
+}
+
+}

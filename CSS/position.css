@@ -1,0 +1,6 @@
+.divListItem, .divInput {
+    display: inline-block;
+    position: relative;
+
+    transition: .5s ease;
+}
