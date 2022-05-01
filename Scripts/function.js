@@ -83,40 +83,87 @@ function detectDevice() {
     return console.log("desktop");
 };
 
+function detectDevice2() {
+    const ua = navigator.userAgent;
+    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+        document.getElementById('mobileSize').href = "#";
+        deviceSize = "tablet";
+        return console.log("tablet");
+    }
+    else if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+        
+        document.getElementById('mobileSize').href = "../CSS/sizesMobile.css";
 
-//Initializing Masonry Layout for Pokedex List
-function masonryPokedex() {
-    var grid = document.querySelector('#pokedexList');
-    var msnry = new Masonry( grid, {
-        // options...
-        itemSelector: '.divListItem',
-        columnWidth: 200
-    });
-}
+        /* THIS IS FOR CREATING NEW FILE; REPLACING FOR MORE STRAIGHTFORWARD METHOD
+        var fileref=document.createElement("link")
+        fileref.setAttribute("rel", "stylesheet")
+        fileref.setAttribute("type", "text/css")
+        fileref.setAttribute("href", "CSS/sizesMobile.css")
+        document.getElementsByTagName("head")[0].appendChild(fileref)
+        */
 
-//Initializing Masonry Layout for Pokemon Profile
-function masonryPokemon() {
-    var grid = document.querySelector('.grid');
-    var msnry = new Masonry( grid, {
-        // options...
-        itemSelector: '.divListItem',
-        p
-    });
-}
-
-var grid = document.querySelector('#pokedexList');
-    var msnry = new Masonry( grid, {
-        // options...
-        itemSelector: '.divListItem',
-        columnWidth: 200
-});
+        deviceSize = "mobile";
+        return console.log("mobile");
+    }
+    document.getElementById('mobileSize').href = "#";
+    deviceSize = "desktop"
+    return console.log("desktop");
+};
 
 
 //Playing Audio
 function playCry(pokemon) {
     var url = "https://play.pokemonshowdown.com/audio/cries/";
-    url = url.concat(pokemon, ".ogg")
+    url = url.concat(pokemon.toLowerCase(), ".ogg")
 
     var cry = new Audio(url);
     cry.play();
+}
+
+//Computation for the Bars 
+function compute(x,y) {
+    var z;
+    console.log((z = (x / y) * 100));
+    return (z = (x / y) * 100);
+}
+
+function createBar() {
+    var x, y, z;
+
+    x = parseInt(document.getElementById('hpBase').innerHTML);
+    y = parseInt(document.getElementById('hpMin').innerHTML);
+    z = compute(x,y).toString();
+    console.log(z.concat("%"));
+    document.getElementById('hpBar').style.width = z.concat("%");
+
+    x = parseInt(document.getElementById('atkBase').innerHTML);
+    y = parseInt(document.getElementById('atkMin').innerHTML);
+    z = compute(x,y).toString();
+    console.log(z.concat("%"));
+    document.getElementById('atkBar').style.width = z.concat("%");
+
+    x = parseInt(document.getElementById('defBase').innerHTML);
+    y = parseInt(document.getElementById('defMin').innerHTML);
+    z = compute(x,y).toString();
+    console.log(z.concat("%"));
+    document.getElementById('defBar').style.width = z.concat("%");
+
+    x = parseInt(document.getElementById('spAtkBase').innerHTML);
+    y = parseInt(document.getElementById('spAtkMin').innerHTML);
+    z = compute(x,y).toString();
+    console.log(z.concat("%"));
+    document.getElementById('spAtkBar').style.width = z.concat("%");
+
+    x = parseInt(document.getElementById('spDefBase').innerHTML);
+    y = parseInt(document.getElementById('spDefMin').innerHTML);
+    z = compute(x,y).toString();
+    console.log(z.concat("%"));
+    document.getElementById('spDefBar').style.width = z.concat("%");
+
+    x = parseInt(document.getElementById('speedBase').innerHTML);
+    y = parseInt(document.getElementById('speedMin').innerHTML);
+    z = compute(x,y).toString();
+    console.log(z.concat("%"));
+    document.getElementById('speedBar').style.width = z.concat("%");
+    
 }

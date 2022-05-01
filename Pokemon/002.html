@@ -11,12 +11,15 @@
 <link href="../CSS/design.css" rel="stylesheet">
 <link href="../CSS/position.css" rel="stylesheet">
 <link href="../CSS/animations.css" rel="stylesheet">
+<link href="../CSS/masonry.css" rel="stylesheet">
+<link href="../CSS/type.css" rel="stylesheet">
 <link href="#" rel="stylesheet" id="mobileSize">
 
 </head>
-<body style="background-color: #F00000;" onload="detectDevice()" onresize="detectDevice()">
+<body style="background-color: #F00000;" onload="detectDevice2(); createBar()" onresize="detectDevice()">
 <link rel="stylesheet" type="text/css">
 
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 <script src="../Scripts/masonry.js"></script>
 <script src="../Scripts/function.js"></script>
 
@@ -47,20 +50,41 @@
                 <div style="font-size: 30px; padding: 2%;">#002</div>
                 <div style="font-size: 20px; margin: 2%;">IVYSAUR</div>
             </div>
-            <div name="pokemonLink">
-                NEXT POKEMON
-                <div name="pokemonListItem" id="003" class="divListItem" onclick="location.href=''" onmouseover="playCry('venusaur')">
 
+        </div>
+
+        <div name="links" class="divProfile" style="width: 100%; height: fit-content;">
+            PREVIOUS POKEMON:
+            <div name="pokemonListItem" id="001" class="divListItem" onclick="location.href=''" onmouseover="playCry('ivysaur')" style="width: auto;">
+                <div style="display: block; float: left;">
                     <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
-                        <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+                        <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
                     </div>
-                    <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
-                        <img src="Images/Sprites/3.gif" width="70px" class="imageBounce">
+                    <div width="20%" style="display:block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+                        <img src="../Images/Sprites/1.gif" width="70px" class="imageBounce">
                     </div>
-                    <div width="80%" style="display: block; float: left; padding-left: 10px;">
-                        <span>VENUSAUR</span>
+                </div>
+                
+                <div width="display: block; float: left;">
+                    <span>#001 BULBASAUR</span>
+                </div>
+            </div>
+        </div>
+
+        <div name="links" class="divProfile" style="width: 100%; height: fit-content;">
+            NEXT POKEMON:
+            <div name="pokemonListItem" id="003" class="divListItem" onclick="location.href=''" onmouseover="playCry('VENUSAUR')" style="width: auto;">
+                <div style="display: block; float: left;">
+                    <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+                        <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
                     </div>
-            
+                    <div width="20%" style="display:block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+                        <img src="../Images/Sprites/3.gif" width="70px" class="imageBounce">
+                    </div>
+                </div>
+                
+                <div width="display: block; float: left;">
+                    <span>#003 VENUSAUR</span>
                 </div>
             </div>
         </div>
@@ -84,7 +108,7 @@
                     </tr>
                     <tr>
                         <th>Type</th>
-                        <td></td>
+                        <td><span class="type grass">GRASS</span><span class="type poison">POISON</span></td>
                     </tr>
                     <tr>
                         <th>Species</th>
@@ -134,6 +158,23 @@
         </div>
     </div>
 
+    <div class="grid-item">
+        <div name="pokemonCry" class="divBreeding" style="width: 100%; background-color: #F0F0F0;">
+
+            <div name="pokemonListItem" id="002" class="divListItem zoom" onmouseover="playCry('bulbasaur')" style=" width: auto;">
+
+                <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+                    <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
+                </div>
+                <div width="80%" style="display: block; float: left; padding-left: 10px; font-size:2vw;">
+                    <span>PLAY CRY</span>
+                </div>
+        
+            </div>
+
+        </div>
+    </div>
+
     <div class="grid-item double">
         <div class="divStats  " style="background-color: #CCE5FF; width: 100%;">
             <div style="font-size: 20px; padding: 1%;">STATS</div>
@@ -141,52 +182,52 @@
                 <table>
                     <tr>
                         <th>HP</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="hpBase">60</td>
+                        <td width="60%"><div class="progressBar" id="hpBar"></div></td>
+                        <td id="hpMin">230</td>
+                        <td id="hpMax">324</td>
                     </tr>
                     <tr>
                         <th>Attack</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="atkBase">62</td>
+                        <td width="60%"><div class="progressBar" id="atkBar"></div></td>
+                        <td id="atkMin">116</td>
+                        <td id="atkMax">245</td>
                     </tr>
                     <tr>
                         <th>Defense</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="defBase"> 63</td>
+                        <td width="60%"><div class="progressBar" id="defBar"></div></td>
+                        <td id="defMin"> 117</td>
+                        <td id="defMax"> 247</td>
                     </tr>
                     <tr>
                         <th>Sp. Atk</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="spAtkBase"> 80</td>
+                        <td width="60%"><div class="progressBar" id="spAtkBar"></div></td>
+                        <td id="spAtkMin"> 148</td>
+                        <td id="spAtkMax"> 284</td>
                     </tr>
                     <tr>
                         <th>Sp. Def</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="spDefBase"> 80</td>
+                        <td width="60%"><div class="progressBar" id="spDefBar"></div></td>
+                        <td id="spDefMin"> 148</td>
+                        <td id="spDefMax"> 284</td>
                     </tr>
                     <tr>
                         <th>Speed</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td id="speedBase"> 60</td>
+                        <td width="60%"><div class="progressBar" id="speedBar"></div></td>
+                        <td id="speedMin"> 112</td>
+                        <td id="speedMax"> 240</td>
                     </tr>
                     <tr>
                         <th>Total</th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td> 405</td>
+                        <td width="60%"></td>
+                        <td> MIN</td>
+                        <td> MAX</td>
                     </tr>
                 </table>
             </div>

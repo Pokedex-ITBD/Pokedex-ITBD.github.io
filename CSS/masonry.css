@@ -1,0 +1,40 @@
+* { box-sizing: border-box; }
+
+/* ---- grid ---- */
+
+.grid {
+  width: 90%;
+  margin-left: 10%;
+
+  text-align: center;
+}
+
+/* ---- grid-item ---- */
+
+.grid-sizer, .grid-item {
+  width: 30%;
+}
+
+.grid-item {
+    float: left;
+    padding: .2%;
+}
+
+.double {
+    width: 60%;
+}
+
+.full {
+    width: 90%;
+}
+
+@media screen and (max-width: 800px) {
+  .grid-item, .grid-item--width2, .grid-item--width3 {
+    width: 100%;
+  }
+  
+  .grid {
+    width: 95%;
+    margin-left: 3%;
+  }
+}

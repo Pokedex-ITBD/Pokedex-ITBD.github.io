@@ -56,7 +56,7 @@
 
 
 /*ZOOM IN ON HOVER*/
-.divListItem:hover {
+.zoom:hover {
   zoom: 1.1;
   -moz-transform: scale(1.1);
 }

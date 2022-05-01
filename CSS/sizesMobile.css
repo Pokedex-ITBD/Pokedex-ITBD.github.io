@@ -6,3 +6,13 @@
 .divProfile, .grid-item, .introduction, .homeNavigations {
     width: 90%;
 }
+
+.grid-item, .double{
+    width: 100%;
+    zoom: 1.8;
+}
+  
+.grid {
+    width: 95%;
+    margin-left: 1%;
+}
