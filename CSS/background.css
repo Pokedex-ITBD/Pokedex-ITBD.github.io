@@ -5,7 +5,23 @@ body {
     background-position: 0% 6%;
 }
 
-@media screen and (orientation:portrait) {
+@media screen and (max-width: 900px) {
+    body {
+        background: none;
+        background-color: #F00000;
+        color: #F0F0F0;
+    }
+ }
+
+@media screen and (max-width: 900px) {
+   body {
+       background: none;
+       background-color: #F00000;
+       color: #F0F0F0;
+   }
+}
+
+@media screen and (orientation:portrait) and (max-width: 500px) {
     
     body {
         background: url("../Images/pokedexHomeBGMobile.svg") no-repeat center center fixed;
@@ -14,9 +30,3 @@ body {
 
 }
 
-@media screen and (max-width: 900px) {
-   body {
-       background: none;
-       background-color: #F00000;
-   }
-}
