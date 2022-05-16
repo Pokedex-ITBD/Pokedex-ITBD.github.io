@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>HOME</title>
-<link rel="icon" href="https://carpio-itbd.github.io/Images/Favicon/crying.ico">
+<title>POKEDEX</title>
+<link rel="icon" href="Images/pokeball.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -11,11 +11,20 @@
 <link href="CSS/design.css" rel="stylesheet">
 <link href="CSS/position.css" rel="stylesheet">
 <link href="CSS/animations.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href="#" rel="stylesheet" id="mobileSize">
+<link href="CSS/navigation.css" rel="stylesheet">
+
+<style>
+    .container, a, .divInput, #pokedexList{
+        font-family: 'pkmn' !important;
+    }
+</style>
 
 </head>
 <body style="background-color: #F00000;" onload="detectDevice()" onresize="detectDevice()">
 <link rel="stylesheet" type="text/css">
+
 
 <script src="Scripts/masonry.js"></script>
 <script src="Scripts/function.js"></script>
@@ -26,13 +35,21 @@
 
 <!-- https://carpio-itbd.github.io/ -->
 
-<div style="text-align: center;">
-    <div>
-        <div class="divNav">
-            <a href="index.html">HOME</a>
-        </div>
+<div id="navigation">
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active"><img src="Images/pokeball2.svg" width="23px" class="imageShake pokeballWhite">&nbsp; POKEDEX</a>
+        <a href="pokedex.html" class="current">POKEDEX LIST</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="authors.html">ABOUT THE AUTHORS</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="javascript:void(0);" class="icon" onclick="funcNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+</div>
 
-    </div>
+<div style="text-align: center; padding-top: 100px;">
 
     <div class="divInput">
 
@@ -49,7 +66,7 @@
 
 <div id="pokedexList" style="text-align: center;">
 
-    <div name="pokemonListItem" id="001" class="divListItem" onclick="location.href=''" onmouseover="playCry('bulbasaur')">
+    <div name="pokemonListItem" id="001" class="divListItem" onclick="location.href='Pokemon/001.html'" onmouseover="playCry('bulbasaur')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -64,7 +81,7 @@
     </div>
 
 
-    <div name="pokemonListItem" id="002" class="divListItem" onclick="location.href=''" onmouseover="playCry('ivysaur')">
+    <div name="pokemonListItem" id="002" class="divListItem" onclick="location.href='Pokemon/002.html'" onmouseover="playCry('ivysaur')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -80,7 +97,7 @@
 
 
 
-    <div name="pokemonListItem" id="003" class="divListItem" onclick="location.href=''" onmouseover="playCry('venusaur')">
+    <div name="pokemonListItem" id="003" class="divListItem" onclick="location.href='Pokemon/003.html'" onmouseover="playCry('venusaur')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -94,7 +111,7 @@
 
     </div>
 
-    <div name="pokemonListItem" id="004" class="divListItem" onclick="location.href=''" onmouseover="playCry('charmander')">
+    <div name="pokemonListItem" id="004" class="divListItem" onclick="location.href='Pokemon/004.html'" onmouseover="playCry('charmander')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -108,7 +125,7 @@
 
     </div>
 
-    <div name="pokemonListItem" id="005" class="divListItem" onclick="location.href=''" onmouseover="playCry('charmeleon')">
+    <div name="pokemonListItem" id="005" class="divListItem" onclick="location.href='Pokemon/005.html'" onmouseover="playCry('charmeleon')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -122,7 +139,7 @@
 
     </div>
 
-    <div name="pokemonListItem" id="006" class="divListItem" onclick="location.href=''" onmouseover="playCry('charizard')">
+    <div name="pokemonListItem" id="006" class="divListItem" onclick="location.href='Pokemon/006.html'" onmouseover="playCry('charizard')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -136,7 +153,7 @@
 
     </div>
 
-    <div name="pokemonListItem" id="007" class="divListItem" onclick="location.href=''" onmouseover="playCry('squirtle')">
+    <div name="pokemonListItem" id="007" class="divListItem" onclick="location.href='Pokemon/007.html'" onmouseover="playCry('squirtle')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -150,7 +167,7 @@
 
     </div>
 
-    <div name="pokemonListItem" id="008" class="divListItem" onclick="location.href=''" onmouseover="playCry('wartortle')">
+    <div name="pokemonListItem" id="008" class="divListItem" onclick="location.href='Pokemon/008.html'" onmouseover="playCry('wartortle')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -164,7 +181,7 @@
 
     </div>
 
-    <div name="pokemonListItem" id="009" class="divListItem" onclick="location.href=''" onmouseover="playCry('blastoise')">
+    <div name="pokemonListItem" id="009" class="divListItem" onclick="location.href='Pokemon/09.html'" onmouseover="playCry('blastoise')">
 
         <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
             <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -177,6 +194,1995 @@
         </div>
 
     </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/010.html'" onmouseover="playCry('CATERPIE')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/10.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>CATERPIE</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/011.html'" onmouseover="playCry('METAPOD')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/11.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>METAPOD</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/012.html'" onmouseover="playCry('BUTTERFREE')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/12.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>BUTTERFREE</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/013.html'" onmouseover="playCry('WEEDLE')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/13.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>WEEDLE</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/014.html'" onmouseover="playCry('KAKUNA')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/14.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KAKUNA</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/015.html'" onmouseover="playCry('BEEDRILL')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/15.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>BEEDRILL</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/016.html'" onmouseover="playCry('PIDGEY')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/16.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PIDGEY</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/017.html'" onmouseover="playCry('PIDGEOTTO')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/17.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PIDGEOTTO</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/018.html'" onmouseover="playCry('PIDGEOT')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/18.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PIDGEOT</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/019.html'" onmouseover="playCry('RATTATA')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/19.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>RATTATA</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/020.html'" onmouseover="playCry('RATICATE')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/20.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>RATICATE</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/021.html'" onmouseover="playCry('SPEAROW')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/21.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SPEAROW</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/022.html'" onmouseover="playCry('FEAROW')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/22.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>FEAROW</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/023.html'" onmouseover="playCry('EKANS')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/23.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>EKANS</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/024.html'" onmouseover="playCry('ARBOK')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/24.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ARBOK</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/025.html'" onmouseover="playCry('PIKACHU')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/25.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PIKACHU</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/026.html'" onmouseover="playCry('RAICHU')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/26.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>RAICHU</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/027.html'" onmouseover="playCry('SANDSHREW')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/27.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SANDSHREW</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/028.html'" onmouseover="playCry('SANDSLASH')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/28.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SANDSLASH</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/029.html'" onmouseover="playCry('NIDORAN')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/29.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NIDORAN</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/030.html'" onmouseover="playCry('NIDORINA')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/30.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NIDORINA</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/031.html'" onmouseover="playCry('NIDOQUEEN')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/31.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NIDOQUEEN</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/032.html'" onmouseover="playCry('NIDORAN')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/32.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NIDORAN</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/33.html'" onmouseover="playCry('NIDORINO')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/33.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NIDORINO</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/034.html'" onmouseover="playCry('NIDOKING')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/34.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NIDOKING</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/035.html'" onmouseover="playCry('CLEFAIRY')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/35.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>CLEFAIRY</span>
+        </div>
+
+    </div>
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/036.html'" onmouseover="playCry('CLEFABLE')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/36.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>CLEFABLE</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/037.html'" onmouseover="playCry('VULPIX')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/37.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VULPIX</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/038.html'" onmouseover="playCry('NINETALES')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/38.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>NINETALES</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/039.html'" onmouseover="playCry('JIGGLYPUFF')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/39.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>JIGGLYPUFF</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/040.html'" onmouseover="playCry('WIGGLYTUFF')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/40.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>WIGGLYTUFF</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/041.html'" onmouseover="playCry('ZUBAT')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/41.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ZUBAT</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/042.html'" onmouseover="playCry('GOLBAT')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/42.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GOLBAT</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/043.html'" onmouseover="playCry('ODDISH')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/43.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ODDISH</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/044.html'" onmouseover="playCry('GLOOM')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/44.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GLOOM</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/5.html'" onmouseover="playCry('VILEPLUME')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/45.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VILEPLUME</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/046.html'" onmouseover="playCry('PARAS')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/46.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PARAS</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/047.html'" onmouseover="playCry('PARASECT')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/47.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PARASECT</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/048.html'" onmouseover="playCry('VENONAT')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/48.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VENONAT</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/049.html'" onmouseover="playCry('VENOMOTH')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/49.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VENOMOTH</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/050.html'" onmouseover="playCry('DIGLETT')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/50.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DIGLETT</span>
+        </div>
+
+    </div>
+
+    <div name="pokemonListItem" id="051" class="divListItem" onclick="location.href='Pokemon/051.html'" onmouseover="playCry('dugtrio')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/51.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DUGTRIO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="052" class="divListItem" onclick="location.href='Pokemon/052.html'" onmouseover="playCry('meowth')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/52.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MEOWTH</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="053" class="divListItem" onclick="location.href='Pokemon/053.html'" onmouseover="playCry('persian')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/53.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PERSIAN</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="054" class="divListItem" onclick="location.href='Pokemon/054.html'" onmouseover="playCry('psyduck')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/54.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PSYDUCK</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="055" class="divListItem" onclick="location.href='Pokemon/055.html'" onmouseover="playCry('golduck')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/55.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GOLDUCK</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="056" class="divListItem" onclick="location.href='Pokemon/056.html'" onmouseover="playCry('mankey')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/56.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MANKEY</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="057" class="divListItem" onclick="location.href='Pokemon/057.html'" onmouseover="playCry('primeape')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/57.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PRIMEAPE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="058" class="divListItem" onclick="location.href='Pokemon/058.html'" onmouseover="playCry('growlithe')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/58.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GROWLITHE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="059" class="divListItem" onclick="location.href='Pokemon/059.html'" onmouseover="playCry('arcanine')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/59.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ARCANINE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="060" class="divListItem" onclick="location.href='Pokemon/060.html'" onmouseover="playCry('poliwag')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/60.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>POLIWAG</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="061" class="divListItem" onclick="location.href='Pokemon/061.html'" onmouseover="playCry('poliwhirl')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/61.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>POLIWHIRL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="062" class="divListItem" onclick="location.href='Pokemon/062.html'" onmouseover="playCry('poliwrath')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/62.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>POLIWRATH</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="063" class="divListItem" onclick="location.href='Pokemon/063.html'" onmouseover="playCry('abra')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/63.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ABRA</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="064" class="divListItem" onclick="location.href='Pokemon/064.html'" onmouseover="playCry('kadabra')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/64.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KADABRA</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="065" class="divListItem" onclick="location.href='Pokemon/065.html'" onmouseover="playCry('alakazam')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/65.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ALAKAZAM</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="066" class="divListItem" onclick="location.href='Pokemon/066.html'" onmouseover="playCry('machop')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/66.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MACHOP</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="067" class="divListItem" onclick="location.href='Pokemon/067.html'" onmouseover="playCry('machoke')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/67.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MACHOKE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="068" class="divListItem" onclick="location.href='Pokemon/068.html'" onmouseover="playCry('machamp')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/68.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MACHAMP</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="069" class="divListItem" onclick="location.href='Pokemon/069.html'" onmouseover="playCry('bellsprout')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/69.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>BELLSPROUT</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="070" class="divListItem" onclick="location.href='Pokemon/070.html'" onmouseover="playCry('weepinbell')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/70.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>WEEPINBELL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="071" class="divListItem" onclick="location.href='Pokemon/071.html'" onmouseover="playCry('victreebel')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/71.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VICTREEBEL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="072" class="divListItem" onclick="location.href='Pokemon/072.html'" onmouseover="playCry('tentacool')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/72.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>TENTACOOL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="073" class="divListItem" onclick="location.href='Pokemon/073.html'" onmouseover="playCry('tentacruel')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/73.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>TENTACRUEL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="074" class="divListItem" onclick="location.href='Pokemon/074.html'" onmouseover="playCry('geodude')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/74.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GEODUDE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="075" class="divListItem" onclick="location.href='Pokemon/075.html'" onmouseover="playCry('graveler')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/75.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GRAVELER</span>
+        </div>
+    
+    </div>
+
+    <div name="pokemonListItem" id="076" class="divListItem" onclick="location.href='Pokemon/076.html'" onmouseover="playCry('golem')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/76.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GOLEM</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="077" class="divListItem" onclick="location.href='Pokemon/077.html'" onmouseover="playCry('ponyta')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/77.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PONYTA</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="078" class="divListItem" onclick="location.href='Pokemon/078.html'" onmouseover="playCry('rapidash')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/78.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>RAPIDASH</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="079" class="divListItem" onclick="location.href='Pokemon/079.html'" onmouseover="playCry('slowpoke')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/79.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SLOWPOKE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="080" class="divListItem" onclick="location.href='Pokemon/080.html'" onmouseover="playCry('slowbro')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/80.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SLOWBRO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="081" class="divListItem" onclick="location.href='Pokemon/081.html'" onmouseover="playCry('magnemite')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/81.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MAGNEMITE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="082" class="divListItem" onclick="location.href='Pokemon/082.html'" onmouseover="playCry('magneton')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/82.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MAGNETON</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="083" class="divListItem" onclick="location.href='Pokemon/083.html'" onmouseover="playCry('farfetch d')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/83.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>FARFETCH'D</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="084" class="divListItem" onclick="location.href='Pokemon/084.html'" onmouseover="playCry('doduo')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/84.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DODUO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="085" class="divListItem" onclick="location.href='Pokemon/085.html'" onmouseover="playCry('dodrio')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/85.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DODRIO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="086" class="divListItem" onclick="location.href='Pokemon/086.html'" onmouseover="playCry('seel')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/86.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SEEL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="087" class="divListItem" onclick="location.href='Pokemon/087.html'" onmouseover="playCry('dewgong')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/87.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DEWGONG</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="088" class="divListItem" onclick="location.href='Pokemon/088.html'" onmouseover="playCry('grimer')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/88.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GRIMER</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="089" class="divListItem" onclick="location.href='Pokemon/089.html'" onmouseover="playCry('muk')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/89.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MUK</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="090" class="divListItem" onclick="location.href='Pokemon/090.html'" onmouseover="playCry('shellder')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/90.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SHELLDER</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="091" class="divListItem" onclick="location.href='Pokemon/091.html'" onmouseover="playCry('cloyster')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/91.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>CLOYSTER</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="092" class="divListItem" onclick="location.href='Pokemon/092.html'" onmouseover="playCry('gastly')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/92.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GASTLY</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="093" class="divListItem" onclick="location.href='Pokemon/093.html'" onmouseover="playCry('haunter')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/93.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>HAUNTER</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="094" class="divListItem" onclick="location.href='Pokemon/094.html'" onmouseover="playCry('gengar')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/94.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GENGAR</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="095" class="divListItem" onclick="location.href='Pokemon/095.html'" onmouseover="playCry('onix')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/95.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ONIX</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="096" class="divListItem" onclick="location.href='Pokemon/096.html'" onmouseover="playCry('drowzee')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/96.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DROWZEE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="097" class="divListItem" onclick="location.href='Pokemon/097.html'" onmouseover="playCry('hypno')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/97.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>HYPNO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="098" class="divListItem" onclick="location.href='Pokemon/098.html'" onmouseover="playCry('krabby')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/98.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KRABBY</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="099" class="divListItem" onclick="location.href='Pokemon/099.html'" onmouseover="playCry('kingler')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/99.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KINGLER</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="100" class="divListItem" onclick="location.href='Pokemon/100.html'" onmouseover="playCry('voltorb')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/100.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VOLTORB</span>
+        </div>
+    
+    </div>
+
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/101.html'" onmouseover="playCry('ELECTRODE')">
+
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/101.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ELECTRODE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/102.html'" onmouseover="playCry('EXEGGCUTE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/102.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>EXEGGCUTE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/103.html'" onmouseover="playCry('EXEGGUTOR')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/103.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>EXEGGUTOR</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/104.html'" onmouseover="playCry('CUBONE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/104.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>CUBONE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/105.html'" onmouseover="playCry('MAROWAK')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/105.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MAROWAK</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/106.html'" onmouseover="playCry('HITMONLEE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/106.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>HITMONLEE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/107.html'" onmouseover="playCry('HITMONCHAN')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/107.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>HITMONCHAN</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/108.html'" onmouseover="playCry('LICKITUNG')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/108.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>LICKITUNG</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/109.html'" onmouseover="playCry('KOFFING')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/109.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KOFFING</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/110.html'" onmouseover="playCry('WEEZING')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/110.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>WEEZING</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/111.html'" onmouseover="playCry('RHYHORN')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/111.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>RHYHORN</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/112.html'" onmouseover="playCry('RHYDON')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/112.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>RHYDON</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/113.html'" onmouseover="playCry('CHANSEY')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/113.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>CHANSEY</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/114.html'" onmouseover="playCry('TANGELA')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/114.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>TANGELA</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/115.html'" onmouseover="playCry('KANGASKHAN')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/115.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KANGASKHAN</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/116.html'" onmouseover="playCry('HORSEA')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/116.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>HORSEA</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/117.html'" onmouseover="playCry('SEADRA')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/117.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SEADRA</span>
+        </div>
+    
+    </div>
+    
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/118.html'" onmouseover="playCry('GOLDEEN')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/118.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GOLDEEN</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/119.html'" onmouseover="playCry('SEAKING')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/119.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SEAKING</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/120.html'" onmouseover="playCry('STARYU')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/120.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>STARYU</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/121.html'" onmouseover="playCry('STARMIE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/121.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>STARMIE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/122.html'" onmouseover="playCry('MR. MIME')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/122.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MR. MIME</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/123.html'" onmouseover="playCry('SCYTHER')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/123.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SCYTHER</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/124.html'" onmouseover="playCry('JYNX')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/124.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>JYNX</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/125.html'" onmouseover="playCry('ELECTABUZZ')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/125.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ELECTABUZZ</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/126.html'" onmouseover="playCry('MAGMAR')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/126.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MAGMAR</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/127.html'" onmouseover="playCry('PINSIR')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/127.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PINSIR</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/128.html'" onmouseover="playCry('TAUROS')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/128.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>TAUROS</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/129.html'" onmouseover="playCry('MAGIKARP')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/129.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MAGIKARP</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/130.html'" onmouseover="playCry('GYARADOS')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/131.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>GYARADOS</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/131.html'" onmouseover="playCry('LAPRAS')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/131.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>LAPRAS</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/132.html'" onmouseover="playCry('DITTO')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/132.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DITTO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/133.html'" onmouseover="playCry('EEVEE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/133.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>EEVEE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/134.html'" onmouseover="playCry('VAPOREON')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/134.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>VAPOREON</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/135.html'" onmouseover="playCry('JOLTEON')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/135.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>JOLTEON</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/136.html'" onmouseover="playCry('FLAREON')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/136.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>FLAREON</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/137.html'" onmouseover="playCry('PORYGON')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/137.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>PORYGON</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/138.html'" onmouseover="playCry('OMANYTE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/138.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>OMANYTE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/139.html'" onmouseover="playCry('OMASTAR')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/139.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>OMASTAR</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/140.html'" onmouseover="playCry('KABUTO')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/140.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KABUTO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/141.html'" onmouseover="playCry('KABUTOPS')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/141.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>KABUTOPS</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/142.html'" onmouseover="playCry('AERODACTYL')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/142.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>AERODACTYL</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/143.html'" onmouseover="playCry('SNORLAX')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/143.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>SNORLAX</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/144.html'" onmouseover="playCry('ARTICUNO')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/144.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ARTICUNO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/145.html'" onmouseover="playCry('ZAPDOS')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/145.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>ZAPDOS</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/146.html'" onmouseover="playCry('MOLTRES')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/146.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MOLTRES</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/147.html'" onmouseover="playCry('DRATINI')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/147.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DRATINI</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/148.html'" onmouseover="playCry('DRAGONAIR')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/148.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DRAGONAIR</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/149.html'" onmouseover="playCry('DRAGONITE')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/149.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>DRAGONITE</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/150.html'" onmouseover="playCry('MEWTWO')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/150.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MEWTWO</span>
+        </div>
+    
+    </div>
+    
+    <div name="pokemonListItem" id="000" class="divListItem" onclick="location.href='Pokemon/151.html'" onmouseover="playCry('MEW')">
+    
+        <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
+            <img src="Images/pokeballLogo.png" width="30px" class="imageShake">
+        </div>
+        <div width="20%" style="display: block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+            <img src="Images/Sprites/151.gif" width="70px" class="imageBounce">
+        </div>
+        <div width="80%" style="display: block; float: left; padding-left: 10px;">
+            <span>MEW</span>
+        </div>
+    
+    </div>
+    
 
 
 </div>

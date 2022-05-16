@@ -49,7 +49,7 @@
   }
 }
 
-.divListItem:hover .imageShake {
+.divListItem:hover .imageShake, .active:hover .imageShake {
   animation: shake 3s ease-in-out;
   animation-iteration-count: infinite;
 }

@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>HOME</title>
-<link rel="icon" href="https://carpio-itbd.github.io/Images/Favicon/crying.ico">
+<title>IVYSAUR</title>
+<link rel="icon" href="../Images/pokeball.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -13,34 +13,75 @@
 <link href="../CSS/animations.css" rel="stylesheet">
 <link href="../CSS/masonry.css" rel="stylesheet">
 <link href="../CSS/type.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <link href="#" rel="stylesheet" id="mobileSize">
+<link href="../CSS/navigation.css" rel="stylesheet">
+
+<style>
+    .container, a, .grid {
+        font-family: 'pkmn' !important;
+        color: #222224;
+    }
+</style>
 
 </head>
 <body style="background-color: #F00000;" onload="detectDevice2(); createBar()" onresize="detectDevice()">
 <link rel="stylesheet" type="text/css">
 
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 <script src="../Scripts/masonry.js"></script>
 <script src="../Scripts/function.js"></script>
 
 
 
-<!--CARPIO, JOHN RANDEL-->
-<!--2022/04/17-->
+<!--
 
-<!-- https://carpio-itbd.github.io/ -->
+
+
+██████╗░░█████╗░██╗░░██╗███████╗██████╗░███████╗██╗░░██╗  ░░░░░░  ██╗████████╗██████╗░██████╗░
+██╔══██╗██╔══██╗██║░██╔╝██╔════╝██╔══██╗██╔════╝╚██╗██╔╝  ░░░░░░  ██║╚══██╔══╝██╔══██╗██╔══██╗
+██████╔╝██║░░██║█████═╝░█████╗░░██║░░██║█████╗░░░╚███╔╝░  █████╗  ██║░░░██║░░░██████╦╝██║░░██║
+██╔═══╝░██║░░██║██╔═██╗░██╔══╝░░██║░░██║██╔══╝░░░██╔██╗░  ╚════╝  ██║░░░██║░░░██╔══██╗██║░░██║
+██║░░░░░╚█████╔╝██║░╚██╗███████╗██████╔╝███████╗██╔╝╚██╗  ░░░░░░  ██║░░░██║░░░██████╦╝██████╔╝
+╚═╝░░░░░░╚════╝░╚═╝░░╚═╝╚══════╝╚═════╝░╚══════╝╚═╝░░╚═╝  ░░░░░░  ╚═╝░░░╚═╝░░░╚═════╝░╚═════╝░
+
+-->
 
 <div id="backgroundImage"></div>
 
 
-<div></div>
+<div id="navigation" style="margin-bottom: 15px;">
+    <div class="topnav" id="myTopnav">
+        <a href="../index.html" class="active"><img src="../Images/pokeball2.svg" width="23px" class="imageShake pokeballWhite">&nbsp; POKEDEX</a>
+        <a href="../pokedex.html">POKEDEX LIST</a>
+        <a href="../about.html">ABOUT US</a>
+        <a href="../authors.html">ABOUT THE AUTHORS</a>
+        <a href="../contact.html">CONTACT US</a>
+        <a href="../gallery.html">GALLERY</a>
+        <a href="javascript:void(0);" class="icon" onclick="funcNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+</div>
 
-<div class="grid">
+<div class="grid" style="padding-top: 70px;">
 
     <div class="grid-item">
+
+        <!--
+
+            !!!!!! TO BE EDITED !!!!!!
+
+            // FIND AND REPLACE ALL '002' WITH THE CURRENT NUMBER OF THE POKEMON (example: 001).
+            // FIND AND REPLACE ALL 'IVYSAUR' WITH THE CURRENT NAME OF THE POKEMON.
+
+        -->
+
         <div name="pokemonProfile" class="divProfile" style="width: 100%;">
             <div name="pokemonPicture" style="text-align: center;">
-               <img src="../Images/Artworks/001.png" class="profilePic"> 
+               <img src="../Images/Artworks/002.png" class="profilePic"> 
             </div>
             <div style="position: relative; text-align: center;">
                 <div class="pokeballLine"> </div>
@@ -54,36 +95,70 @@
         </div>
 
         <div name="links" class="divProfile" style="width: 100%; height: fit-content;">
+
+            <!--
+                !!!!!! TO BE EDITED !!!!!!
+
+                //REPLACE 'BULBASAUR' WITH THE NAME OF THE POKEMON THE PRECEDES THIS CURRENT POKEMON ON THE POKEDEX LIST.
+                //REPLACE '001' WITH THE NUMBER OF THE POKEMON THE PRECEDES THIS CURRENT POKEMON ON THE POKEDEX LIST.
+
+                !!! IMPORTANT NOTE: ONLY A MAXIMUM OF 3 DIGITS! SO '1' WILL BE '001' AND '31' WILL BE '031'. 3 DIGITS ONLY! !!!
+                    SAMPLE FORMAT: #001, #031, #150, etc.
+            
+            -->
+
             PREVIOUS POKEMON:
-            <div name="pokemonListItem" id="001" class="divListItem" onclick="location.href=''" onmouseover="playCry('ivysaur')" style="width: auto;">
+            <!--SAMPLE FORMAT: 001, 001.html-->
+            <div name="pokemonListItem" id="001" class="divListItem" onclick="location.href='001.html'" onmouseover="playCry('BULBASAUR')" style="width: auto;">
                 <div style="display: block; float: left;">
                     <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
                         <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
                     </div>
                     <div width="20%" style="display:block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+
+                        <!--DO NOT PUT '0' INFRONT OF THE NUMBER FOR THIS ONE. JUST PUT THE ACTUAL NUMBER (example: 1.gif)-->
                         <img src="../Images/Sprites/1.gif" width="70px" class="imageBounce">
                     </div>
                 </div>
                 
                 <div width="display: block; float: left;">
+
+                    <!-- SAMPLE FORMAT: #001 BULBASAUR -->
                     <span>#001 BULBASAUR</span>
                 </div>
             </div>
         </div>
 
         <div name="links" class="divProfile" style="width: 100%; height: fit-content;">
+
+            <!--
+                !!!!!! TO BE EDITED !!!!!!
+
+                //REPLACE 'VENUSAUR' WITH THE NAME OF THE POKEMON THE FOLLOWS THIS CURRENT POKEMON ON THE POKEDEX LIST.
+                //REPLACE '003' WITH THE NUMBER OF THE POKEMON THE FOLLOWS THIS CURRENT POKEMON ON THE POKEDEX LIST.
+
+                !!! IMPORTANT NOTE: ONLY A MAXIMUM OF 3 DIGITS! SO '1' WILL BE '001' AND '31' WILL BE '031'. 3 DIGITS ONLY! !!!
+                    SAMPLE FORMAT: #001, #031, #150, etc.
+            
+            -->
+
             NEXT POKEMON:
-            <div name="pokemonListItem" id="003" class="divListItem" onclick="location.href=''" onmouseover="playCry('VENUSAUR')" style="width: auto;">
+            <!--SAMPLE FORMAT: 001, 001.html-->
+            <div name="pokemonListItem" id="003" class="divListItem" onclick="location.href='003.html'" onmouseover="playCry('VENUSAUR')" style="width: auto;">
                 <div style="display: block; float: left;">
                     <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
                         <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
                     </div>
                     <div width="20%" style="display:block; float: left; margin-left: -40px; margin-top: -20px; z-index: 10;">
+
+                        <!--DO NOT PUT '0' INFRONT OF THE NUMBER FOR THIS ONE. JUST PUT THE ACTUAL NUMBER (example: 1.gif)-->
                         <img src="../Images/Sprites/3.gif" width="70px" class="imageBounce">
                     </div>
                 </div>
                 
                 <div width="display: block; float: left;">
+
+                    <!-- SAMPLE FORMAT: #001 BULBASAUR -->
                     <span>#003 VENUSAUR</span>
                 </div>
             </div>
@@ -93,10 +168,28 @@
     <div class="grid-item double">
         <div name="pokemonDescription" class="divDesc  " style="padding: 1%; width: 100%;">
             <div style="font-size: 20px; padding: 1%;">DESCRIPTION</div>
-            While it is young, it uses the nutrients that are stored in the seed on its back in order to grow.
+
+            <!--
+
+                !!!!!!! INSERT THE DESCRIPTION OF THE POKEMON HERE !!!!!!!!!
+
+                YOU CAN FIND THE POKEMON DESCRIPTION HERE @ https://www.pokemon.com/us/pokedex/
+            -->
+            When the bulb on its back grows large, it appears to lose the ability to stand on its hind legs.
         </div>
     </div>
 
+
+    <!--
+
+        !!!!!!!!!!! POKEMON DATA !!!!!!!!!
+
+        !!!!! FROM HERE ON OUT, GET THE DATA FROM THIS LINK: https://pokemondb.net/pokedex/game/red-blue-yellow
+
+        JUST SELECT THE POKEMON YOU ARE CURRENTLY EDITING AND INSERT ALL THE CORRESPONDING DATA TO THE FOLLOWING TABLES BELOWS!
+
+
+    -->
     <div class="grid-item">
         <div class="divData  " style="background-color: #CDEB8B; width: 100%;">
             <div style="font-size: 20px; padding: 1%;">DATA</div>
@@ -104,31 +197,40 @@
                 <table>
                     <tr>
                         <th>National No.</th>
-                        <td>002</td>
+                        <td>#002</td> <!--SAMPLE FORMAT: #001, #031, #150, etc.-->
                     </tr>
                     <tr>
                         <th>Type</th>
-                        <td><span class="type grass">GRASS</span><span class="type poison">POISON</span></td>
+                        <td>
+                            <!-- ENTER POKEMON TYPE HERE
+                            
+                                EXAMPLE: <span class="type normal">NORMAL</span>
+
+                                The type must be enclose within a <span></span> tag and the class must be set to "type" plus the actual type name.
+                                
+                                If the pokemon has more than one type, just repeat the process.
+                            -->
+
+                            <span class="type grass">GRASS</span>
+                            <span class="type poison">POISON</span>
+                        </td>
                     </tr>
                     <tr>
                         <th>Species</th>
-                        <td></td>
+                        <td>Seed Pokémon</td>
                     </tr>
                     <tr>
                         <th>Height</th>
-                        <td></td>
+                        <td>1.0 m (3′03″)</td>
                     </tr>
                     <tr>
                         <th>Weight</th>
-                        <td></td>
+                        <td>13.0 kg (28.7 lbs)</td>
                     </tr>
                     <tr>
                         <th>Abilities</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td></td>
+                        <td> Overgrow
+                            <br>Chlorophyll (hidden ability)</td>
                     </tr>
                 </table>
             </div>
@@ -142,15 +244,15 @@
                 <table>
                     <tr>
                         <th>Egg Groups</th>
-                        <td></td>
+                        <td>Grass, Monster</td>
                     </tr>
                     <tr>
                         <th>Gender</th>
-                        <td></td>
+                        <td>87.5% male, 12.5% female</td>
                     </tr>
                     <tr>
                         <th>Egg Cycle</th>
-                        <td></td>
+                        <td>20 (4,884–5,140 steps)</td>
                     </tr>
                 </table>
             </div>
@@ -161,12 +263,12 @@
     <div class="grid-item">
         <div name="pokemonCry" class="divBreeding" style="width: 100%; background-color: #F0F0F0;">
 
-            <div name="pokemonListItem" id="002" class="divListItem zoom" onmouseover="playCry('bulbasaur')" style=" width: auto;">
+            <div name="pokemonListItem" id="000" class="divListItem zoom" onmouseover="playCry('IVYSAUR')" style=" width: auto;">
 
                 <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
                     <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
                 </div>
-                <div width="80%" style="display: block; float: left; padding-left: 10px; font-size:2vw;">
+                <div width="80%" style="display: block; float: left; padding-left: 10px; font-size: 3vh;">
                     <span>PLAY CRY</span>
                 </div>
         
@@ -183,51 +285,51 @@
                     <tr>
                         <th>HP</th>
                         <td id="hpBase">60</td>
-                        <td width="60%"><div class="progressBar" id="hpBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="hpBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="hpMin">230</td>
                         <td id="hpMax">324</td>
                     </tr>
                     <tr>
                         <th>Attack</th>
                         <td id="atkBase">62</td>
-                        <td width="60%"><div class="progressBar" id="atkBar"></div></td>
-                        <td id="atkMin">116</td>
-                        <td id="atkMax">245</td>
+                        <td width="60%"><div class="progressBar" id="atkBar"></div></td><!--DO NOT EDIT THIS LINE-->
+                        <td id="atkMin"> 116</td>
+                        <td id="atkMax"> 245</td>
                     </tr>
                     <tr>
                         <th>Defense</th>
-                        <td id="defBase"> 63</td>
-                        <td width="60%"><div class="progressBar" id="defBar"></div></td>
-                        <td id="defMin"> 117</td>
+                        <td id="defBase">63</td>
+                        <td width="60%"><div class="progressBar" id="defBar"></div></td><!--DO NOT EDIT THIS LINE-->
+                        <td id="defMin">117</td>
                         <td id="defMax"> 247</td>
                     </tr>
                     <tr>
                         <th>Sp. Atk</th>
-                        <td id="spAtkBase"> 80</td>
-                        <td width="60%"><div class="progressBar" id="spAtkBar"></div></td>
-                        <td id="spAtkMin"> 148</td>
+                        <td id="spAtkBase">80</td>
+                        <td width="60%"><div class="progressBar" id="spAtkBar"></div></td><!--DO NOT EDIT THIS LINE-->
+                        <td id="spAtkMin">148</td>
                         <td id="spAtkMax"> 284</td>
                     </tr>
                     <tr>
                         <th>Sp. Def</th>
-                        <td id="spDefBase"> 80</td>
-                        <td width="60%"><div class="progressBar" id="spDefBar"></div></td>
-                        <td id="spDefMin"> 148</td>
+                        <td id="spDefBase">80</td>
+                        <td width="60%"><div class="progressBar" id="spDefBar"></div></td><!--DO NOT EDIT THIS LINE-->
+                        <td id="spDefMin">148</td>
                         <td id="spDefMax"> 284</td>
                     </tr>
                     <tr>
                         <th>Speed</th>
-                        <td id="speedBase"> 60</td>
-                        <td width="60%"><div class="progressBar" id="speedBar"></div></td>
+                        <td id="speedBase">60</td>
+                        <td width="60%"><div class="progressBar" id="speedBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="speedMin"> 112</td>
                         <td id="speedMax"> 240</td>
                     </tr>
                     <tr>
                         <th>Total</th>
-                        <td> 405</td>
+                        <td>405</td>
                         <td width="60%"></td>
-                        <td> MIN</td>
-                        <td> MAX</td>
+                        <td>MIN</td>
+                        <td>MAX</td>
                     </tr>
                 </table>
             </div>
@@ -239,20 +341,42 @@
     <div class="grid-item full">
         <div class="divBreeding" style="background-color: #FFFF88; width: 100%; text-align: center;">
 
-            <div class="linkEvolution" onclick="window.open('001.html','mywindow')">
+            <div name="pokemonEvolution" class="linkEvolution" onclick="window.open('001.html','mywindow')">
                 <div><img src="../Images/Artworks/001.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
-                <div>POKEMON AT LV. 00</div>
+                <div>BULBASAUR AT LV. 1</div>
             </div>
 
-            <div class="linkEvolution" onclick="window.open('001.html','mywindow')">
-                <div><img src="../Images/Artworks/001.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
-                <div>POKEMON AT LV. 00</div>
+            <!--
+
+                !!!!!! TO BE EDITED !!!!!!
+                  
+                !!!!!!!!!! PUT THE POKEMON EVOLUTION HERE !!!!!!!!!!
+
+                  //CHANGE THE POKEMON_NAME TO THE DESIGNATED POKEMON (example: BULBASAUR).
+                  //REPLACE THE LV. NUMBER AT WHICH THE POKEMON EVOLVES (example: LV. 16)
+                  //CHANGE THE LINK "000.html" TO THE RIGHT LINK OF THE POKEMON (example: 001.html).
+                  //CHANGE THE POKEMON IMAGE BY CHANGING THE LINK NAME FROM "000.png" TO THE CORRECT POKEMON NUMBER (example: 001.png).
+
+                  !!! IMPORTANT NOTE: ONLY A MAXIMUM OF 3 DIGITS! SO '1' WILL BE '001' AND '31' WILL BE '031'. 3 DIGITS ONLY! !!!
+
+                  !!! IF THE POKEMON DOES NOT HAVE AN EVOLUTION, JUST DELETE THE DIV BELOW!
+
+
+            -->  
+            <!--MAKE SURE TO CHANGE THE HTML LINK '002' FOR THE POKEMON EVOLUTION WITH THE CORRECT ONE-->             
+            <div name="pokemonEvolution" class="linkEvolution" onclick="window.open('002.html','mywindow')">
+                <div><img src="../Images/Artworks/002.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
+                <div>IVYSAUR AT LV. 16</div>
             </div>
 
-            <div class="linkEvolution" onclick="window.open('001.html','mywindow')">
-                <div><img src="../Images/Artworks/001.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
-                <div>POKEMON AT LV. 00</div>
+            <div name="pokemonEvolution" class="linkEvolution" onclick="window.open('003.html','mywindow')">
+                <div><img src="../Images/Artworks/003.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
+                <div>VENUSAUR AT LV. 32</div>
             </div>
+
+            <!--
+                IF THE POKEMON HAS MORE THAN 1 EVOLUTION IN ITS LINEUP, JUST COPY AND PASTE THE DIV ABOVE AND REPEAT THE PROCEDURE OF CHAGING ALL THE THINGS NEEDED TO BE CHANGE!
+            -->
 
         
         </div>

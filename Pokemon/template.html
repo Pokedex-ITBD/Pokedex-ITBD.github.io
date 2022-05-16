@@ -43,7 +43,7 @@
 
 <div></div>
 
-<div class="grid">
+<div class="grid" style="padding-top: 70px;">
 
     <div class="grid-item">
 
@@ -121,7 +121,7 @@
 
             NEXT POKEMON:
             <!--SAMPLE FORMAT: 001, 001.html-->
-            <div name="pokemonListItem" id="NEXT_POKEMON_NUMBER" class="divListItem" onclick="location.href='NEXT_POKEMON_NUMBER.html'" onmouseover="playCry('VENUSAUR')" style="width: auto;">
+            <div name="pokemonListItem" id="NEXT_POKEMON_NUMBER" class="divListItem" onclick="location.href='NEXT_POKEMON_NUMBER.html'" onmouseover="playCry('NEXT_POKEMON_NAME')" style="width: auto;">
                 <div style="display: block; float: left;">
                     <div width="20%" style="display: block; float: left; padding-left: 5px; margin-top: -5px;">
                         <img src="../Images/pokeballLogo.png" width="30px" class="imageShake">
@@ -188,6 +188,8 @@
                                 If the pokemon has more than one type, just repeat the process.
                             -->
 
+                            <span class="type "></span>
+                            <span class="type "></span>
                         </td>
                     </tr>
                     <tr>
@@ -204,11 +206,7 @@
                     </tr>
                     <tr>
                         <th>Abilities</th>
-                        <td></td>
-                    </tr>
-                    <tr>
-                        <th></th>
-                        <td></td>
+                        <td></td> <!--there maybe two abilities, just seperate them with a <br>-->
                     </tr>
                 </table>
             </div>
@@ -263,42 +261,42 @@
                     <tr>
                         <th>HP</th>
                         <td id="hpBase"></td>
-                        <td width="60%"><div class="progressBar" id="hpBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="hpBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="hpMin"></td>
                         <td id="hpMax"></td>
                     </tr>
                     <tr>
                         <th>Attack</th>
                         <td id="atkBase"> </td>
-                        <td width="60%"><div class="progressBar" id="atkBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="atkBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="atkMin"> </td>
                         <td id="atkMax"> </td>
                     </tr>
                     <tr>
                         <th>Defense</th>
                         <td id="defBase"> </td>
-                        <td width="60%"><div class="progressBar" id="defBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="defBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="defMin"> </td>
                         <td id="defMax"> </td>
                     </tr>
                     <tr>
                         <th>Sp. Atk</th>
                         <td id="spAtkBase"> </td>
-                        <td width="60%"><div class="progressBar" id="spAtkBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="spAtkBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="spAtkMin"> </td>
                         <td id="spAtkMax"> </td>
                     </tr>
                     <tr>
                         <th>Sp. Def</th>
                         <td id="spDefBase"> </td>
-                        <td width="60%"><div class="progressBar" id="spDefBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="spDefBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="spDefMin"> </td>
                         <td id="spDefMax"> </td>
                     </tr>
                     <tr>
                         <th>Speed</th>
                         <td id="speedBase"> </td>
-                        <td width="60%"><div class="progressBar" id="speedBar"></div></td>
+                        <td width="60%"><div class="progressBar" id="speedBar"></div></td><!--DO NOT EDIT THIS LINE-->
                         <td id="speedMin"> </td>
                         <td id="speedMax"> </td>
                     </tr>
@@ -306,8 +304,8 @@
                         <th>Total</th>
                         <td> </td>
                         <td width="60%"></td>
-                        <td> </td>
-                        <td> </td>
+                        <td>MIN</td>
+                        <td>MAX</td>
                     </tr>
                 </table>
             </div>
@@ -319,11 +317,16 @@
     <div class="grid-item full">
         <div class="divBreeding" style="background-color: #FFFF88; width: 100%; text-align: center;">
 
+        
+            
+
             <!--
 
                 !!!!!! TO BE EDITED !!!!!!
                   
                 !!!!!!!!!! PUT THE POKEMON EVOLUTION HERE !!!!!!!!!!
+
+                !!!!!!!!! IF  THE POKEMON IS ON THE SAME EVOLUTION LINE, JUST COPY AND PASTE THE ECOLUTION CHART FROM THE FIRST POKEMON IN THE LINE TO HERE !!!!!!
 
                   //CHANGE THE POKEMON_NAME TO THE DESIGNATED POKEMON (example: BULBASAUR).
                   //REPLACE THE LV. NUMBER AT WHICH THE POKEMON EVOLVES (example: LV. 16)
@@ -332,13 +335,29 @@
 
                   !!! IMPORTANT NOTE: ONLY A MAXIMUM OF 3 DIGITS! SO '1' WILL BE '001' AND '31' WILL BE '031'. 3 DIGITS ONLY! !!!
 
-                  !!! IF THE POKEMON DOES NOT HAVE AN EVOLUTION, JUST DELETED THE DIV BELOW!
+                  !!! IF THE POKEMON DOES NOT HAVE AN EVOLUTION, JUST DELETE THE DIV BELOW!
 
 
-            -->                
+            --> 
+
+            <!--
+                !!!!!!!! IMPORTANT:
+                
+                IF THIS IS POKEMON IS PART OF AN EVOLUTION LINE, THEN JUST COPY THE EVOLUTION PART OF THE VERY FIRST POKEMON FROM THAT POKEMON'S PAGE AND PASTE IT HERE!
+                
+                MAKE SURE TO DELETE THE CONTENT HERE FIRST BEFORE PASTING.
+            -->
+
+            <!--MAKE SURE TO CHANGE THE HTML LINK '002' FOR THE POKEMON EVOLUTION WITH THE CORRECT ONE-->       
+            <div name="pokemonEvolution" class="linkEvolution" onclick="window.open('000.html','mywindow')">
+                <div><img src="../Images/Artworks/CURRENT_NUMBER.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
+                <div>REPLACE_NAME AT LV. 1</div>
+            </div>
+            
+            <!--MAKE SURE TO CHANGE THE HTML LINK '002' FOR THE POKEMON EVOLUTION WITH THE CORRECT ONE-->       
             <div name="pokemonEvolution" class="linkEvolution" onclick="window.open('000.html','mywindow')">
                 <div><img src="../Images/Artworks/000.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%;"></div>
-                <div>POKEMON_NAME AT LV. 00</div>
+                <div>POKEMON_NAME AT LV. 0</div>
             </div>
 
             <!--

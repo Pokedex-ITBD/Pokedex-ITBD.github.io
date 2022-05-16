@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>HOME</title>
-<link rel="icon" href="https://carpio-itbd.github.io/Images/Favicon/crying.ico">
+<title>REPLACE_NAME</title>
+<link rel="icon" href="Images/pokeball.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -11,139 +11,231 @@
 <link href="CSS/design.css" rel="stylesheet">
 <link href="CSS/position.css" rel="stylesheet">
 <link href="CSS/animations.css" rel="stylesheet">
+<link href="CSS/masonry.css" rel="stylesheet">
+<link href="CSS/type.css" rel="stylesheet">
 <link href="#" rel="stylesheet" id="mobileSize">
+<link href="CSS/navigation.css" rel="stylesheet">
 
 <style>
-    .profilePic {
-        border: 5px solid #222224;
-        border-radius: 50%;
-        padding: 10px;
+    .container, a {
+        font-family: 'pkmn' !important;
+        color: #F0F0F0;
     }
 
-    .heightAdjust {
-        display: flex; 
-        flex-direction: row;
+    .grid-item, .grid-sizer {
+        width: 40%;
+    }
 
-        overflow-x: auto;
-        overflow-y: hidden;
-        white-space: nowrap;
+    @media screen and (max-width: 800px) {
+        .grid-item, .grid-sizer {
+            width: 100%;
+        }
+        
+        .grid {
+            width: 95%;
+            margin-left: 3%;
+        }
+    }
+
+    .grid-item {
+        width: 400px;
     }
 </style>
 
 </head>
-<body style="background-color: #F00000;" onload="detectDevice()" onresize="detectDevice()">
+<body style="background-color: #F00000;" onload="detectDevice2();" onresize="detectDevice()">
 <link rel="stylesheet" type="text/css">
-<!--CARPIO, JOHN RANDEL-->
-<!--2022/04/17-->
 
-<!-- https://carpio-itbd.github.io/ -->
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
 
-<script src="../Scripts/masonry.js"></script>
+<script src="Scripts/masonry.js"></script>
+<script src="Scripts/function.js"></script>
 
-<div name="navigation">
 
-</div>
 
-<div id="authors" class="heightAdjust">
-    <div name="pokemonProfile" class="divProfile">
-        <div name="pokemonPicture" style="text-align: center; padding: 5%">
-           <img src="Images/Authors/ran.png" class="profilePic"> 
-        </div>
-        <div style="position: relative; text-align: center;">
-            <div class="pokeballLine"> </div>
-            <div class="pokeballCenter"> </div>
-        </div>
-        <div name="pokemonInfo" style="overflow: auto; white-space: normal; text-overflow: ellipsis; width: 97%;">
-            <div style="font-size: 3vh; margin: 3%; text-align: center;">CARPIO, JOHN RANDEL</div>
-            <div style="font-size: 2vh; margin: 2%;">
-                I have nothing to say, nothing to explain, thank you very much.
-            </div>
-        </div>
-    </div>
+<!--
 
-    <div name="pokemonProfile" class="divProfile">
-        <div name="pokemonPicture" style="text-align: center; padding: 5%">
-           <img src="Images/Authors/mav.jpg" class="profilePic"> 
-        </div>
-        <div style="position: relative; text-align: center;">
-            <div class="pokeballLine"> </div>
-            <div class="pokeballCenter"> </div>
-        </div>
-        <div name="pokemonInfo" style="overflow: auto; white-space: normal; text-overflow: ellipsis; width: 97%;">
-            <div style="font-size: 3vh; margin: 3%; text-align: center;">MANAHAN, MAVERICK</div>
-            <div style="font-size: 2vh; margin: 2%;">
-                My name is Maverick, I would rather program/code than designing something because I lack creativity in that area. I love to play games and sometimes enjoy programming when given a task, though I'm not smart but I still have ideas on how to program but I'm also slow in analyzing a source code that isn't my work
-            </div>
-        </div>
-    </div>
 
-    <div name="pokemonProfile" class="divProfile">
-        <div name="pokemonPicture" style="text-align: center; padding: 5%">
-           <img src="Images/Authors/mara.png" class="profilePic"> 
-        </div>
-        <div style="position: relative; text-align: center;">
-            <div class="pokeballLine"> </div>
-            <div class="pokeballCenter"> </div>
-        </div>
-        <div name="pokemonInfo" style="overflow: auto; white-space: normal; text-overflow: ellipsis; width: 97%;">
-            <div style="font-size: 3vh; margin: 3%; text-align: center;">MADURO, MARA JONNA</div>
-            <div style="font-size: 2vh; margin: 2%;">
-                "Long time ago, people who sacrifice their sleep, family, food, laughter and other joys of life were called SAINTS. But now, they are called IT Professionals." -Unknown
-            </div>
-        </div>
-    </div>
 
-    <div name="pokemonProfile" class="divProfile">
-        <div name="pokemonPicture" style="text-align: center; padding: 5%">
-           <img src="Images/Authors/mat.png" class="profilePic"> 
-        </div>
-        <div style="position: relative; text-align: center;">
-            <div class="pokeballLine"> </div>
-            <div class="pokeballCenter"> </div>
-        </div>
-        <div name="pokemonInfo" style="overflow: auto; white-space: normal; text-overflow: ellipsis; width: 97%;">
-            <div style="font-size: 3vh; margin: 3%; text-align: center;">DELLORO, MATTHEW</div>
-            <div style="font-size: 2vh; margin: 2%;">
-                I like doing fun things that up my Brain Cells.
-            </div>
-        </div>
-    </div>
+██████╗░░█████╗░██╗░░██╗███████╗██████╗░███████╗██╗░░██╗  ░░░░░░  ██╗████████╗██████╗░██████╗░
+██╔══██╗██╔══██╗██║░██╔╝██╔════╝██╔══██╗██╔════╝╚██╗██╔╝  ░░░░░░  ██║╚══██╔══╝██╔══██╗██╔══██╗
+██████╔╝██║░░██║█████═╝░█████╗░░██║░░██║█████╗░░░╚███╔╝░  █████╗  ██║░░░██║░░░██████╦╝██║░░██║
+██╔═══╝░██║░░██║██╔═██╗░██╔══╝░░██║░░██║██╔══╝░░░██╔██╗░  ╚════╝  ██║░░░██║░░░██╔══██╗██║░░██║
+██║░░░░░╚█████╔╝██║░╚██╗███████╗██████╔╝███████╗██╔╝╚██╗  ░░░░░░  ██║░░░██║░░░██████╦╝██████╔╝
+╚═╝░░░░░░╚════╝░╚═╝░░╚═╝╚══════╝╚═════╝░╚══════╝╚═╝░░╚═╝  ░░░░░░  ╚═╝░░░╚═╝░░░╚═════╝░╚═════╝░
 
-    <div name="pokemonProfile" class="divProfile">
-        <div name="pokemonPicture" style="text-align: center; padding: 5%">
-           <img src="Images/Authors/dem.jpg" class="profilePic"> 
-        </div>
-        <div style="position: relative; text-align: center;">
-            <div class="pokeballLine"> </div>
-            <div class="pokeballCenter"> </div>
-        </div>
-        <div name="pokemonInfo" style="overflow: auto; white-space: normal; text-overflow: ellipsis; width: 97%;">
-            <div style="font-size: 3vh; margin: 3%; text-align: center;">DEMDAM, JHAROD</div>
-            <div style="font-size: 2vh; margin: 2%;">
-            </div>
-        </div>
-    </div>
+-->
 
-    <div name="pokemonProfile" class="divProfile">
-        <div name="pokemonPicture" style="text-align: center; padding: 5%">
-           <img src="Images/Authors/mara.png" class="profilePic"> 
-        </div>
-        <div style="position: relative; text-align: center;">
-            <div class="pokeballLine"> </div>
-            <div class="pokeballCenter"> </div>
-        </div>
-        <div name="pokemonInfo" style="overflow: auto; white-space: normal; text-overflow: ellipsis; width: 97%;">
-            <div style="font-size: 3vh; margin: 3%; text-align: center;">BALINO, NICOLE</div>
-            <div style="font-size: 2vh; margin: 2%;">
-            </div>
-        </div>
-    </div>
+<div id="backgroundImage"></div>
 
+
+<div id="navigation" style="margin: -10px; margin-bottom: 20px;">
+    <div class="topnav" id="myTopnav">
+        <a href="index.html" class="active"><img src="Images/pokeball2.svg" width="21px" class="imageShake pokeballWhite">&nbsp; POKEDEX</a>
+        <a href="pokedex.html">POKEDEX LIST</a>
+        <a href="about.html">ABOUT US</a>
+        <a href="authors.html" class="current">ABOUT THE AUTHORS</a>
+        <a href="contact.html">CONTACT US</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="javascript:void(0);" class="icon" onclick="funcNav()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
 </div>
 
 
+<div class="grid" style=" padding-top: 100px;">
 
-<div></div>
+    <div class="grid-item">
+
+        <div name="pokemonProfile" class="divProfile" style="width: 100%;">
+            <div name="pokemonPicture" style="text-align: center;">
+               <img src="Images/Authors/ran.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%; margin: 5%;"> 
+            </div>
+            <div style="position: relative; text-align: center;">
+                <div class="pokeballLine"> </div>
+                <div class="pokeballCenter"> </div>
+            </div>
+            <div name="pokemonInfo">
+                <div style="font-size: 30px; margin: 2%;">JOHN RANDEL CARPIO</div>
+                <div style="font-size: 20px; margin: 2%; padding-bottom: 5%; padding-top: 5%;">
+                    I firmly believe that this world is a crappy place to live in.
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="Images/Gif/opening_redBlue.gif" class="divProfile" style="width: 100%;">
+    </div>
+
+    <div class="grid-item">
+
+        <div name="pokemonProfile" class="divProfile" style="width: 100%;">
+            <div name="pokemonPicture" style="text-align: center;">
+               <img src="Images/Authors/mav.jpg" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%; margin: 5%;"> 
+            </div>
+            <div style="position: relative; text-align: center;">
+                <div class="pokeballLine"> </div>
+                <div class="pokeballCenter"> </div>
+            </div>
+            <div name="pokemonInfo">
+                <div style="font-size: 30px; margin: 2%;">MAVERICK MANAHAN</div>
+                <div style="font-size: 20px; margin: 2%; padding-bottom: 5%; padding-top: 5%;">
+                    My name is Maverick, I would rather program/code than designing something because I lack creativity in that area. I love to play games and sometimes enjoy programming when given a task, though I'm not smart but I still have ideas on how to program but I'm also slow in analyzing a source code that isn't my work
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="Images/Gif/opening_crystal.webp" class="divProfile" style="width: 100%;">
+    </div>
+
+    <div class="grid-item">
+
+        <div name="pokemonProfile" class="divProfile" style="width: 100%;">
+            <div name="pokemonPicture" style="text-align: center;">
+               <img src="Images/Authors/bal.jpg" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%; margin: 5%;"> 
+            </div>
+            <div style="position: relative; text-align: center;">
+                <div class="pokeballLine"> </div>
+                <div class="pokeballCenter"> </div>
+            </div>
+            <div name="pokemonInfo">
+                <div style="font-size: 30px; margin: 2%;">NICOLE BALINO</div>
+                <div style="font-size: 20px; margin: 2%; padding-bottom: 5%; padding-top: 5%;">
+                    It’s a curious thing about our industry: not only do we not learn from our mistakes, but we also don’t learn from our successes. (Keith Braithwaite)
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="Images/Gif/opening_emerald2.gif" class="divProfile" style="width: 100%;">
+    </div>
+
+    <div class="grid-item">
+
+        <div name="pokemonProfile" class="divProfile" style="width: 100%;">
+            <div name="pokemonPicture" style="text-align: center;">
+               <img src="Images/Authors/dem.jpg" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%; margin: 5%;"> 
+            </div>
+            <div style="position: relative; text-align: center;">
+                <div class="pokeballLine"> </div>
+                <div class="pokeballCenter"> </div>
+            </div>
+            <div name="pokemonInfo">
+                <div style="font-size: 30px; margin: 2%;">JHAROD DEMDAM</div>
+                <div style="font-size: 20px; margin: 2%; padding-bottom: 5%; padding-top: 5%;">
+                    Hi! My name is Jharod and my goal is to not be better than anyone but better than I used to be.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="Images/Gif/opening_fire.gif" class="divProfile" style="width: 100%;">
+    </div>
+
+    <div class="grid-item">
+
+        <div name="pokemonProfile" class="divProfile" style="width: 100%;">
+            <div name="pokemonPicture" style="text-align: center;">
+               <img src="Images/Authors/mara.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%; margin: 5%;"> 
+            </div>
+            <div style="position: relative; text-align: center;">
+                <div class="pokeballLine"> </div>
+                <div class="pokeballCenter"> </div>
+            </div>
+            <div name="pokemonInfo">
+                <div style="font-size: 30px; margin: 2%;">MARA JOHNNA MADURO</div>
+                <div style="font-size: 20px; margin: 2%; padding-bottom: 5%; padding-top: 5%;">
+                    "Long time ago, people who sacrifice their sleep, family, food, laughter and other joys of life were called SAINTS. But now, they are called IT Professionals." -Unknown
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="Images/Gif/op_yellow.gif" class="divProfile" style="width: 100%;">
+    </div>
+
+    <div class="grid-item">
+
+        <div name="pokemonProfile" class="divProfile" style="width: 100%;">
+            <div name="pokemonPicture" style="text-align: center;">
+               <img src="Images/Authors/mat.png" class="profilePic" style="border: 5px solid #222224; border-radius: 50%; padding: 1%; width: 50%; margin: 5%;"> 
+            </div>
+            <div style="position: relative; text-align: center;">
+                <div class="pokeballLine"> </div>
+                <div class="pokeballCenter"> </div>
+            </div>
+            <div name="pokemonInfo">
+                <div style="font-size: 30px; margin: 2%;">MATTHEW DELLORO</div>
+                <div style="font-size: 20px; margin: 2%; padding-bottom: 5%; padding-top: 5%;">
+                    I like doing fun things that up my Brain Cells.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="grid-item">
+        <img src="Images/Gif/op_dungeon.gif" class="divProfile" style="width: 100%;">
+    </div>
+
+    
+    
+
+
+</div>
 
 </body>
 </html>

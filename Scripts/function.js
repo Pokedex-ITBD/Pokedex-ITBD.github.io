@@ -123,47 +123,91 @@ function playCry(pokemon) {
 //Computation for the Bars 
 function compute(x,y) {
     var z;
-    console.log((z = (x / y) * 100));
-    return (z = (x / y) * 100);
+    z = (x / y) * 100
+    console.log(z);
+    if (z < 100) {
+        return z;
+    } else {
+        return 100;
+    }
+}
+
+var red = '#f84834';
+var yellow = '#f8d700';
+var green = '#18c020';
+
+function barColor(a,b) {
+    console.log("changeColor" + a)
+    if (a > 50) {
+        console.log("color changed to #B3A125");
+        document.getElementById(b).style.backgroundColor = green;
+        return;
+    }
+    if (a > 20) {
+        console.log("color changed to #FFDEO0");
+        document.getElementById(b).style.backgroundColor = yellow;
+        return;
+    }
+    if (a <= 20) {
+        console.log("color changed to #F00000");
+        document.getElementById(b).style.backgroundColor = red;
+        return;
+    }
 }
 
 function createBar() {
     var x, y, z;
 
     x = parseInt(document.getElementById('hpBase').innerHTML);
-    y = parseInt(document.getElementById('hpMin').innerHTML);
+    y = 200;
     z = compute(x,y).toString();
     console.log(z.concat("%"));
     document.getElementById('hpBar').style.width = z.concat("%");
+    barColor(compute(x,y),"hpBar");
 
     x = parseInt(document.getElementById('atkBase').innerHTML);
-    y = parseInt(document.getElementById('atkMin').innerHTML);
+    y = 200;
     z = compute(x,y).toString();
     console.log(z.concat("%"));
     document.getElementById('atkBar').style.width = z.concat("%");
+    barColor(compute(x,y),"atkBar");
 
     x = parseInt(document.getElementById('defBase').innerHTML);
-    y = parseInt(document.getElementById('defMin').innerHTML);
+    y = 200;
     z = compute(x,y).toString();
     console.log(z.concat("%"));
     document.getElementById('defBar').style.width = z.concat("%");
+    barColor(compute(x,y),"defBar");
 
     x = parseInt(document.getElementById('spAtkBase').innerHTML);
     y = parseInt(document.getElementById('spAtkMin').innerHTML);
     z = compute(x,y).toString();
     console.log(z.concat("%"));
     document.getElementById('spAtkBar').style.width = z.concat("%");
+    barColor(compute(x,y),"spAtkBar");
 
     x = parseInt(document.getElementById('spDefBase').innerHTML);
     y = parseInt(document.getElementById('spDefMin').innerHTML);
     z = compute(x,y).toString();
     console.log(z.concat("%"));
     document.getElementById('spDefBar').style.width = z.concat("%");
+    barColor(compute(x,y),"spDefBar");
 
     x = parseInt(document.getElementById('speedBase').innerHTML);
     y = parseInt(document.getElementById('speedMin').innerHTML);
     z = compute(x,y).toString();
     console.log(z.concat("%"));
     document.getElementById('speedBar').style.width = z.concat("%");
+    barColor(compute(x,y),"speedBar");
     
+}
+
+//FUNCTION FOR NAVIGATION
+function funcNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
 }
