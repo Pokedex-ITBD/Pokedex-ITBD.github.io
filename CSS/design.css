@@ -191,7 +191,7 @@ input:focus {
         width: 90%;
     }
     .homeNavigations {
-        margin-top: 50vw;
+        width: 60%;
     }
 }
 
@@ -219,6 +219,26 @@ input:focus {
 .navigationLinks:hover {
     color: #F0F0F0;
     background-color: #F00000;
+}
+
+@media screen and (max-width: 1100px) {
+    .navigationLinks {
+        color: #F0F0F0;
+    }
+    .navigationLinks:hover {
+        background-color: #F0F0F0;
+        color: #F00000;
+    }
+}
+
+@media screen and (orientation:portrait) {
+    .navigationLinks {
+        color: #F00000;
+    }
+    .navigationLinks:hover {
+        color: #F0F0F0;
+        background-color: #F00000;
+    }
 }
 
 
