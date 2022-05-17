@@ -186,6 +186,17 @@ input:focus {
 
 
 
+@media screen and (max-width: 900px) {
+    .introduction {
+        width: 90%;
+    }
+    .homeNavigations {
+        margin-top: 50vw;
+    }
+}
+
+
+
 /*NAVIGATIONS*/
 
 
